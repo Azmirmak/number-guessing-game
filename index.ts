@@ -13,8 +13,11 @@ const answer = await inquirer.prompt([
   },
 ]);
 
-if(answer.guessedNumber === randomNumber) {
+if(answer.guessedNumber > randomNumber){
+  console.log("Please guess the number from given range");
+}else if(answer.guessedNumber === randomNumber) {
     console.log("Congratulation! You guessed the right number");
-}else{
+}
+else{
     console.log("You guessed the wrong number");   
 }
